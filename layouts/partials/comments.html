@@ -35,8 +35,10 @@
             <script src="{{ $res.RelPermalink }}"></script>
         {{ end }}
         <script type="text/javascript">
+            // example https://elshahawi.dev/2019/08/markdown-syntax-guide/
+            let postId = window.location.href.replace("{{ .Site.BaseURL }}",'').replace('/','_');
             var gitalk = new Gitalk({
-                id: window.location.href,
+                id: postId,
                 number: -1,
                 title: "{{ .Title }}",
                 clientID: "{{ .Site.Params.gitalk.clientId }}",
