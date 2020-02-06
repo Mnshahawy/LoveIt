@@ -34,7 +34,12 @@
             {{- $res := resources.Get "js/lib/gitalk/gitalk.min.js" | resources.Minify -}}
             <script src="{{ $res.RelPermalink }}"></script>
         {{ end }}
+        {{ if isset .Params.git_issue }}
+        <input type="hidden" id="git_issue" name="git_issue" value="{{ .Params.git_issue }}">
+        {{ $author = .Site.Author.name }}
+        {{ end }}
         <script type="text/javascript">
+            window.git_issue = Number(document.getElementById('git_issue').value);
             var gitalk = new Gitalk({
                 id: "{{ .Date }}",
                 title: "{{ .Title }}",

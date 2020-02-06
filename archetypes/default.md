@@ -7,13 +7,10 @@ description: ""
 show_in_homepage: true
 show_description: false
 license: ''
-
 tags: []
 categories: []
-
 featured_image: ''
-featured_image_preview: ''
-
+featured_image_preview: 'images/'
 comment: true
 toc: false
 autoCollapseToc: true

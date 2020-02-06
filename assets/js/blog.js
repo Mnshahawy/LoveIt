@@ -96,6 +96,7 @@ jQuery(function($) {
 
     _Blog._refactorToc = function(toc) {
         // when headings do not start with `h1`
+        if(!toc) return;
         const oldTocList = toc.children[0];
         let newTocList = oldTocList;
         let temp;
