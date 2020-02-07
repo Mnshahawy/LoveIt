@@ -31,12 +31,12 @@
         {{ if eq (getenv "HUGO_ENV") "production" | and .Site.Params.cdn.gitalk_js }}
             {{ .Site.Params.cdn.gitalk_js | safeHTML }}
         {{ else }}
-            {{- $res := resources.Get "js/lib/gitalk/gitalk.min.js" | resources.Minify -}}
+            {{- $res := resources.Get "js/lib/gitalk/gitalk.min.js" -}}
             <script src="{{ $res.RelPermalink }}"></script>
         {{ end }}
         <script type="text/javascript">
             // example https://elshahawi.dev/2019/08/markdown-syntax-guide/
-            let postId = window.location.href.replace("{{ .Site.BaseURL }}",'').replace('/','_');
+            let postId = window.location.href.replace("{{ .Site.BaseURL }}",'').replace(/\//g,'_');
             var gitalk = new Gitalk({
                 id: postId,
                 number: -1,
@@ -59,7 +59,7 @@
         {{ if eq (getenv "HUGO_ENV") "production" | and .Site.Params.cdn.valine_js }}
             {{ .Site.Params.cdn.valine_js | safeHTML }}
         {{ else }}
-            {{- $res := resources.Get "js/lib/valine/Valine.min.js" | resources.Minify -}}
+            {{- $res := resources.Get "js/lib/valine/Valine.min.js" -}}
             <script src="{{ $res.RelPermalink }}"></script>
         {{ end }}
         <script type="text/javascript">

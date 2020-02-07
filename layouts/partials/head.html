@@ -45,12 +45,12 @@
 {{ if eq (getenv "HUGO_ENV") "production" | and .Site.Params.cdn.fontawesome_free_css -}}
     {{ .Site.Params.cdn.fontawesome_free_css | safeHTML }}
 {{ else -}}
-    {{ $res := resources.Get "css/lib/fontawesome-free/all.min.css" | resources.Minify -}}
+    {{ $res := resources.Get "css/lib/fontawesome-free/all.min.css" -}}
     <link rel="stylesheet" href="{{ $res.RelPermalink }}">
 {{ end }}
 {{ if eq (getenv "HUGO_ENV") "production" | and .Site.Params.cdn.animate_css -}}
     {{ .Site.Params.cdn.animate_css | safeHTML }}
 {{ else -}}
-    {{ $res := resources.Get "css/lib/animate/animate.min.css" | resources.Minify -}}
+    {{ $res := resources.Get "css/lib/animate/animate.min.css" -}}
     <link rel="stylesheet" href="{{ $res.RelPermalink }}">
 {{ end }}
