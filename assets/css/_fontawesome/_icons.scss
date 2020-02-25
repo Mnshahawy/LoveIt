@@ -1,0 +1,20 @@
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+readers do not read off random characters that represent icons */
+
+.#{$fa-css-prefix}-adjust:before { content: fa-content($fa-var-adjust); }
+.#{$fa-css-prefix}-angle-left:before { content: fa-content($fa-var-angle-left); }
+.#{$fa-css-prefix}-angle-right:before { content: fa-content($fa-var-angle-right); }
+.#{$fa-css-prefix}-calendar-alt:before { content: fa-content($fa-var-calendar-alt); }
+.#{$fa-css-prefix}-clock:before { content: fa-content($fa-var-clock); }
+.#{$fa-css-prefix}-copyright:before { content: fa-content($fa-var-copyright); }
+.#{$fa-css-prefix}-facebook:before { content: fa-content($fa-var-facebook); }
+.#{$fa-css-prefix}-facebook-square:before { content: fa-content($fa-var-facebook-square); }
+.#{$fa-css-prefix}-folder:before { content: fa-content($fa-var-folder); }
+.#{$fa-css-prefix}-github-alt:before { content: fa-content($fa-var-github-alt); }
+.#{$fa-css-prefix}-heart:before { content: fa-content($fa-var-heart); }
+.#{$fa-css-prefix}-linkedin:before { content: fa-content($fa-var-linkedin); }
+.#{$fa-css-prefix}-pencil-alt:before { content: fa-content($fa-var-pencil-alt); }
+.#{$fa-css-prefix}-reddit:before { content: fa-content($fa-var-reddit); }
+.#{$fa-css-prefix}-tag:before { content: fa-content($fa-var-tag); }
+.#{$fa-css-prefix}-twitter:before { content: fa-content($fa-var-twitter); }
+.#{$fa-css-prefix}-user-circle:before { content: fa-content($fa-var-user-circle); }

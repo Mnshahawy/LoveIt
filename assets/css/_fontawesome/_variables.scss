@@ -1,0 +1,37 @@
+// Variables
+// --------------------------
+
+$fa-font-path:         "../font" !default;
+$fa-font-size-base:    16px !default;
+$fa-font-display:      auto !default;
+$fa-css-prefix:        fa !default;
+$fa-version:           "5.12.1" !default;
+$fa-border-color:      #eee !default;
+$fa-inverse:           #fff !default;
+$fa-li-width:          2em !default;
+$fa-fw-width:          (20em / 16);
+$fa-primary-opacity:   1 !default;
+$fa-secondary-opacity: .4 !default;
+
+// Convenience function used to set content property
+@function fa-content($fa-var) {
+  @return unquote("\"#{ $fa-var }\"");
+}
+
+$fa-var-adjust: \e804;
+$fa-var-angle-left: \e80f;
+$fa-var-angle-right: \e810;
+$fa-var-calendar-alt: \e80d;
+$fa-var-clock: \e80c;
+$fa-var-copyright: \e80b;
+$fa-var-facebook: \e803;
+$fa-var-facebook-square: \e808;
+$fa-var-folder: \e806;
+$fa-var-github-alt: \e800;
+$fa-var-heart: \e80a;
+$fa-var-linkedin: \e801;
+$fa-var-pencil-alt: \e80e;
+$fa-var-reddit: \e809;
+$fa-var-tag: \e805;
+$fa-var-twitter: \e802;
+$fa-var-user-circle: \e807;
