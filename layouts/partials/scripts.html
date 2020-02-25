@@ -129,7 +129,10 @@
             };window.echartsArr=[];</script>
         {{ end }}
     {{ end }}
-
+    {{if .Params.contactForm }}
+        {{ $res := resources.Get "/js/contactForm.js" | resources.Minify }}
+        <script src="{{ $res.RelPermalink }}"></script>
+    {{ end }}
     {{ if .Scratch.Get "diagram" }}
         {{ $mermaid | safeHTML }}
     {{ end }}
