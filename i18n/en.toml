@@ -21,6 +21,9 @@ other = "Category"
 
 [categories]
 other = "Categories"
+
+[contact]
+other = "Contact Me"
 # === Taxonomy ===
 
 # === Pagination ===
