@@ -1,0 +1,36 @@
+<form action="{{ .Get "url" }}" , method="POST" id="contactForm">
+    <div class="row">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" minlength="2" pattern="[a-zA-Z ]+" required />
+        <div class="requirements">
+            A valid name is required.
+        </div>
+    </div>
+    <div class="row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="reply_to" placeholder="youremail@domain.com" required />
+        <div class="requirements">
+            A valid email is required. This will be how I get back to you.
+        </div>
+    </div>
+    <div class="row">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" pattern="[a-zA-Z0-9 ]+" minlength="7" placeholder="Feedback for post titled... or Quote for..."
+            required />
+        <div class="requirements">
+            Please, provide informative subject, so I can clearly identify your inquiry.
+        </div>
+    </div>
+    <div class="row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write something....." minlength="70" style="height:200px"
+            required></textarea>
+            <div class="requirements">
+                Please, provide me with details regarding your inquiry. At least 70 character in length.
+            </div>
+    </div>
+    <div class="row">
+        <input id="submit" type="submit" value="Send Email">
+    </div>
+    
+</form>

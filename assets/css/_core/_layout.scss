@@ -28,3 +28,12 @@
   transform: translateY(35vh);
   text-align: center;
 }
+
+/* Clear floats after the columns */
+.row {
+  display: block;
+  &:after{
+    content: "";
+    clear: both;
+  }
+}
