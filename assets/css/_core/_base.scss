@@ -78,8 +78,9 @@ input[type=text],
 input[type=email],
 select,
 textarea {
-  width: 90%;
-  padding: 12px 0 12px 40px;
+  box-sizing:border-box;
+  width: 100%;
+  padding: 12px 12px 12px 40px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
