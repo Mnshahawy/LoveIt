@@ -22,8 +22,9 @@
 
 {{/* {{ $img := imageConfig ($src.RelPermalink | printf "content/%s" ) }} */}}
 
-<div class="img" style="background: url(data:image/jpeg;base64,{{ $lqip.Content | base64Encode  }}); background-size: cover;">
+<div class="img">
   <svg width="{{ $src.Width }}" height="{{ $src.Height }}" aria-hidden="true"></svg>
+  <figure>
   <img
     class="lazyload"
     data-sizes="auto"
@@ -46,7 +47,7 @@
       data-src="{{ $src.RelPermalink }}"
     {{ end }}
     width="{{ $src.Width }}" height="{{ $src.Height }}"
-    {{ with .Get "alt" }}alt='{{.}}'{{ end }}>
+    {{ with .Get "alt" }}alt='{{.}}'{{ end }}><figcaption class=image-caption>{{ with .Get "alt" }} {{.}} {{ end }}</figcaption></figure>
   <noscript>
     <img
       loading="lazy"
