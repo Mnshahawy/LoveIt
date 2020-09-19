@@ -6,10 +6,10 @@
     {{ end }}
 
     <!--featured_image-->
-    {{ with .Params.featured_image }}
-        {{ $image := $.Params.featured_image_preview | default . }}
+    {{ with $.Param "previewImage" }}
+        {{ $image := $.Param "previewImage.src" | default . }}
         <div class="post-featured-image-preview">
-            <img src="/images/loading.svg" data-sizes=auto data-src={{ $image }} alt="featured image" class="lazyload">
+            <img src="/images/loading.svg" data-sizes=auto data-src={{ $image }} alt ={{ $.Param "previewImage.alt" | default "Preview Image"}} class="lazyload">
         </div>
     {{ end }}
     <!-- end featured_image-->

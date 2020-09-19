@@ -37,9 +37,9 @@
             </div>
         </div>
 
-        {{ with .Params.featured_image }}
+        {{ with $.Param "featuredImage" }}
             <div class="post-featured-image">
-                <img src="/images/loading.svg" data-sizes=auto data-src={{ . }} alt="featured image" class="lazyload align-left">
+                <img src="/images/loading.svg" data-sizes=auto data-src={{ $.Param "featuredImage.src" }} alt={{ $.Param "featuredImage.alt" | default "Featured Image"}} class="lazyload align-left">
             </div>
         {{ end }}
 
