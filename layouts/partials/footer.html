@@ -8,7 +8,7 @@
                 <span itemprop="copyrightYear">{{ now.Year }}</span>
             {{- end -}}
             {{- with .Site.Author.name -}}
-                <span class="author" itemprop="copyrightHolder">&nbsp;<a href="{{ $.Site.BaseURL }}">{{ . }}.</a> All rights reserved.</span>
+                <span class="author" itemprop="copyrightHolder">&nbsp;<a href="{{ $.Site.BaseURL }}">{{ . }}.</a> {{ $.Site.Copyright }}</span>
             {{- end -}}
             {{- with .Site.Params.icp -}}
                 <span class="icp">&nbsp;|&nbsp;{{ . | safeHTML }}</span>
